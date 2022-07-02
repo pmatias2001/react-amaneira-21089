@@ -5,6 +5,7 @@
 import React from "react";
 import Tabela from "./Tabela";
 import Formulario from './Formulario';
+import './App.css'
 
 var aux;
 
@@ -205,7 +206,7 @@ class App extends React.Component {
     const { pratos, prato } = this.state;
 
     return (
-      <div className="container">
+      <div  className="container" >
         <h1>Pratos</h1>
         <h4>Novo prato:</h4>
         <Formulario pratoIN={prato} editOUT={this.handleEditPrato} pratoOUT={this.handleNovoPrato} />
