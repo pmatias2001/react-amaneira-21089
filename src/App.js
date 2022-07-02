@@ -35,10 +35,10 @@ async function getPratos() {
 async function InserePrato(prato) {
   // criar o contentor que levará os dados para a API
   let formData = new FormData();
-  formData.append("Nome", prato.Nome);
-  formData.append("Preco", prato.Preco);
-  formData.append("NumStock", prato.NumStock);
-  formData.append("Descricao", prato.Descricao);
+  formData.append("nome", prato.Nome);
+  formData.append("auxPreco", prato.Preco);
+  formData.append("numStock", prato.NumStock);
+  formData.append("descricao", prato.Descricao);
   formData.append("uploadFotoPrato", prato.Foto);
   // entregar os dados à API
   let resposta = await fetch("api/pratosAPI/",
@@ -56,10 +56,10 @@ async function InserePrato(prato) {
 async function AtualizaPrato(prato) {
   // criar o contentor que levará os dados para a API
   let formData = new FormData();
-  formData.append("Nome", prato.Nome);
-  formData.append("Preco", prato.Preco);
-  formData.append("NumStock", prato.NumStock);
-  formData.append("Descricao", prato.Descricao);
+  formData.append("nome", prato.Nome);
+  formData.append("auxPreco", prato.Preco);
+  formData.append("numStock", prato.NumStock);
+  formData.append("descricao", prato.Descricao);
   formData.append("uploadFotoPrato", prato.Foto);
   // entregar os dados à API para a atualização
   let resposta = await fetch("api/pratosAPI/" + aux + "",
